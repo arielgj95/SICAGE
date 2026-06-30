@@ -1,0 +1,14 @@
+# Python 3.10 environment for TED playlist download and subtitle fetching.
+# This mirrors the tracked TED4CL download requirements.
+
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+youtube-transcript-api
+secretstorage
+yt-dlp
+deep-translator
+torch
+transformers>=4.38,<5
+sentencepiece

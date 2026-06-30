@@ -1,0 +1,49 @@
+# Python 3.8 environment for SICAGE training, evaluation, rendering, and MMPose-based preprocessing.
+#
+# This file pins the package versions used for the tracked main SICAGE pipeline.
+#
+# After installing this file, install the exact OpenMMLab stack with:
+#   python -m mim install "mmcv==2.0.1" "mmdet==3.1.0" "mmpose==1.1.0"
+#
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
+torch==1.10.0+cu111
+torchvision==0.11.1+cu111
+torchaudio==0.10.0+cu111
+
+openmim
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+tqdm
+lmdb
+easydict
+PyYAML
+transformers==4.23.1
+sentencepiece
+scikit-learn
+tensorboard
+librosa
+soundfile
+pyloudnorm
+opencv-python
+scenedetect
+Pillow
+moviepy
+backpack-for-pytorch
+deep-translator
+blobfile
+wandb
+configargparse
+gTTS
+bark
+openai-whisper
+h5py
+praat-parselmouth
+pydub
+essentia
+TextGrid
+torchgeometry
+protobuf==4.25.3

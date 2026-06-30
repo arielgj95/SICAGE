@@ -1,0 +1,13 @@
+## SICAGE-data3 with python 3.10 for video download. Cookies are necessary, use browser extention to download them from youtube ##
+
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+youtube-transcript-api
+secretstorage
+yt-dlp
+deep-translator
+torch
+transformers>=4.38,<5
+sentencepiece

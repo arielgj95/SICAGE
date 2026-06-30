@@ -1,0 +1,57 @@
+# v0: xyz, v1: ZEGGS by yongkang, v1: ZEGGS by yongkang bugfix
+
+h5file: "../process/speaker_2_10"   # "../process/speaker_2_10_v0.h5"
+n_poses: 25 #150
+motion_resampling_framerate: 30     # 20 -> 60
+motion_dim: 512 #684     # 684/1141
+njoints: 2052    # 684 * 3 = 2052
+latent_dim: 512 #512 #384   # 256 -> 512, 384
+n_seed: 5 #30
+cond_mask_prob: 0.1
+style_dim: 1536 # For culture embedding #2
+dataset: 'whole_dataset'
+dataset_path: 'data_root/full_dataset'
+metadata_path: 'data_root/full_dataset/metadata/metadata.pkl'
+dataset_info_path: 'data_root/full_dataset/metadata'
+sep_people: '_sep_people'
+splits_data_path:
+culture_config_path: 'culture_encoder/config.yml'
+fishr_model_path: 'culture_encoder/fishr_train/full_data_culclI/model_best.pt'
+adversarial_checkpoint_path: ''
+adversarial_model_save_path: 'culture_encoder/adversarial_train'
+vqvae_config_path: 'vq_vae/configs/codebook.yml'
+alignment_model_checkpoint_path: ''
+use_translated_text: false
+use_language_features: true
+use_translated_text_eval:
+use_language_features_eval:
+use_alignment_module: false
+lambda_low_level_context: 0.0
+lambda_high_level_context: 0.0
+lambda_contrastive: 0.0
+use_culture_guidance_loss: false
+lambda_culture_guidance: 0.0
+seed: 10
+device: 'cuda:0'
+audio_feature_dim: 1857 #1434   # 1133 + 301; audio_f + text_f; AUDIO ARE MFCC, Mel Spectrum, Pitch, Energy [39], WavLM [5], and Onsets [2]. Now are wav2vec + onset + mel = 1024 + 1 + 64 = 1089 + 768 (text) = 1857
+
+audio_feat_dim_latent: 96   # 64 -> 128, 96
+num_workers: 4 
+batch_size: 64 #350
+log_interval: 100
+weight_decay: 0.0 #0.0001 #0.0
+lr_anneal_steps: 0
+use_culture: True
+use_adversarial: True
+save_dir: "./MDM-model"
+audio_feat: "wavlm"
+max_num_steps: 100 #num steps indicates epochs. 100 epochs are more than 500000 steps #500000 #50000000
+save_iters: 50000 #180000
+name: "MDM" #DiffuseStyleGesture+"  #"MDM"   #"DiffuseStyleGesture+"   # "DiffuseStyleGesture", "DiffuseStyleGesture+", "DiffuseStyleGesture++"
+version: "v0"   # "v0, v1"
+suffix: ""
+
+lr: 0.00005 #0.0001     # 0.00003 ->
+betas: [0.5, 0.999]
+milestones: [100, 200]
+gamma: 0.1

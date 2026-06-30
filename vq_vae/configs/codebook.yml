@@ -1,0 +1,53 @@
+VQVAE:
+    #Codebook Configs
+    levels: 1
+    downs_t: [1,]       
+    strides_t : [3,]
+    emb_width : 512
+    l_bins : 1024
+    l_mu : 0.99
+    commit : 0.2 
+    hvqvae_multipliers : [1,]
+    width: 512
+    depth: 3
+    m_conv : 1.0
+    dilation_growth_rate : 3
+    sample_length: 75 
+    use_bottleneck: True
+    joint_channel: 9
+    # width: 128
+    # m_conv: 1.0
+    # dilation_growth_rate: 1
+    dilation_cycle: 3
+    vel: .1      # 1 -> 0
+    acc: .1      # 1 -> 0
+    reg: .1      # 1 -> 0
+    vqvae_reverse_decoder_dilation: True
+    #train_data_path: "./data/processed/samples/vqvae_dataset/train_vqvae.pt"
+    #val_data_path: "./data/processed/samples/vqvae_dataset/val_vqvae.pt"
+    #test_data_path: "./data/processed/samples/vqvae_dataset/test_vqvae.pt"
+
+# DATA
+#data_path: "./data/processed/samples/vqvae_dataset"
+joints_mean_path: "./data/processed/motion/motion_data_mean.pkl"
+joints_std_path: "./data/processed/motion/motion_data_std.pkl"
+#the average link lengths are not too different for different speakers. The reconstructed motion will still be ok
+speaker_link_len: "" 
+plot_path: "vq_vae/data/processed/motion"
+
+n_poses: 75     
+#n_codes: 15
+gpu: '0'
+no_cuda: ['0']
+batch_size: 512 
+#loader_workers: 4
+epochs: 300     #
+save_per_epochs: 20     
+model_save_path: "./vq_vae/output/train_codebook"
+checkpoint_path: "./vq_vae/output/train_codebook/codebook_checkpoint_best.bin"
+name: "codebook"
+
+lr: 1.0e-04
+betas: [0.9, 0.999]
+milestones: [100, 200]
+gamma: 0.1

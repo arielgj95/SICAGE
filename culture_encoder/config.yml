@@ -1,0 +1,41 @@
+# MLP culture classifier
+levels: 1
+layer_neurons: 512
+embed_dim: 512
+batch_size: 256
+lr: 0.0001
+betas: [0.9, 0.999]
+#milestones: [30, 60]
+#reg: 0.001
+#gamma: 0.1
+n_cultures: 4
+save_per_epochs: 3     
+dropout: 0.1
+adversarial_weight: 0.5
+pose_enc_type: "transformer"
+audio_enc_type: None
+model_save_path: "culture_encoder/fishr_motion"
+adversarial_model_save_path: "culture_encoder/adversarial_train"
+fishr_model_path: "culture_encoder/fishr_train/full_data_culclI/model_best.pt"
+#name: "culclA"
+epochs: 30
+#weights_path: "path/to/cultural_encoder/output/train_culclA/codebook_checkpoint_best.bin"
+#train_data_path: "path/to/data/processed/samples/train_culclA.pt"
+#val_data_path: "path/to/data/processed/samples/val_culclA.pt"
+#test_data_path: "path/to/data/processed/samples/test_culclA.pt"
+    
+
+
+# DATA
+data_path: "data_root/whole_dataset"
+metadata_path: "data_root/whole_dataset_metadata.pkl"
+data_path_info: "data_root/whole_dataset_info"
+
+#data_path: "path/to/data/gesture_dataset"
+#metadata_path: "path/to/data/gesture_dataset_metadata.pkl"
+#data_path_info: "path/to/data/gesture_dataset_info"
+
+#data_path: "path/to/old_data"
+#speaker_link_len: "path/to/data/processed/motion/link_lengths/example_lengths.pkl"
+plot_path: "culture_encoder/fishr_motion/plots"
+device: 'cuda:0'
