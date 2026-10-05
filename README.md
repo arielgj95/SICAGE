@@ -5,7 +5,7 @@
 </p>
 
 This is the official implementation of **"SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset,"**
-accepted at ECCV 2026. The authors are Ariel Gjaci, Antonio Sgorbissa, and Vittorio Murino.
+published in the ECCV 2026 proceedings. The authors are Ariel Gjaci, Antonio Sgorbissa, and Vittorio Murino.
 
 **Paper:** [arXiv:2606.30001](https://arxiv.org/abs/2606.30001) · **Project page:** [arielgjaci.com/sicage](https://arielgjaci.com/sicage/) · **Dataset:** [ariel-95/TED4C-L](https://huggingface.co/datasets/ariel-95/TED4C-L)
 
@@ -1298,14 +1298,11 @@ If you use SICAGE or TED4C-L, please cite:
 
 ```bibtex
 @inproceedings{gjaci2026sicage,
-  author        = {Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
-  title         = {SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset},
-  booktitle     = {European Conference on Computer Vision (ECCV)},
-  year          = {2026},
-  eprint        = {2606.30001},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV},
-  doi           = {10.48550/arXiv.2606.30001},
-  url           = {https://arxiv.org/abs/2606.30001}
+  title={SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset},
+  author={Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
+  booktitle={European Conference on Computer Vision},
+  pages={392--411},
+  year={2026},
+  organization={Springer}
 }
 ```

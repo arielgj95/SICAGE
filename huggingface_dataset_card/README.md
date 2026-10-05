@@ -32,7 +32,7 @@ created to study co-speech gesture generation across four source groups: Indian,
 Italian, Japanese, and Turkish TED speakers.
 
 Paper: [SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L
-Dataset](https://arxiv.org/abs/2606.30001), accepted at ECCV 2026.
+Dataset](https://arxiv.org/abs/2606.30001), published in the ECCV 2026 proceedings.
 
 Each record is a five-second window containing aligned motion, speech, and text
 representations. Windows overlap with a stride of 0.5 seconds. The public release
@@ -255,14 +255,11 @@ If you use TED4C-L or SICAGE, please cite:
 
 ```bibtex
 @inproceedings{gjaci2026sicage,
-  author        = {Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
-  title         = {SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset},
-  booktitle     = {European Conference on Computer Vision (ECCV)},
-  year          = {2026},
-  eprint        = {2606.30001},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV},
-  doi           = {10.48550/arXiv.2606.30001},
-  url           = {https://arxiv.org/abs/2606.30001}
+  title={SICAGE: Speaker-Independent Culture-Aware Gesture Generation using TED4C-L Dataset},
+  author={Gjaci, Ariel and Sgorbissa, Antonio and Murino, Vittorio},
+  booktitle={European Conference on Computer Vision},
+  pages={392--411},
+  year={2026},
+  organization={Springer}
 }
 ```
